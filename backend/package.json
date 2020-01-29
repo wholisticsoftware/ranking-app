@@ -1,0 +1,17 @@
+{
+  "name": "rank-app",
+  "version": "1.0.0",
+  "description": "An app to rank things",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "ranking"
+  ],
+  "author": "Matt Tyson",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.11.0"
+  }
+}
