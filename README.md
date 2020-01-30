@@ -19,8 +19,7 @@ NOTE: Make sure mongo is running in background on localhost
 
 ### If you are looking at this, and would like to see something added or refined 
 
-* better error handling?  
-* More organized API sections?
+* better error handling?
 * Security?  Want to see some authentication/authorization?
 * Consume an external API?
 * Beautify the front-end a bit?
