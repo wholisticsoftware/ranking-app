@@ -34,7 +34,7 @@ function App() {
     console.info("adding category: " + catName);
     let body = JSON.stringify({"name": catName});
     console.log("body: " + body);
-    fetch('http://localhost:3001/category', {
+    fetch('http://localhost:3001/categories', {
       method: 'post',
       headers: {'Content-Type':'application/json'},
       body: body
@@ -42,7 +42,7 @@ function App() {
   }
   let activateCategory = async (evt, id) => {
       evt.preventDefault();
-      const res = await fetch("http://localhost:3001/category/"+id);
+      const res = await fetch("http://localhost:3001/categories/"+id);
 
       if (!res.ok) { throw new Error(res.status); }
 
@@ -53,11 +53,11 @@ function App() {
   }
   let deleteCategory = async (evt, _id) => {
       evt.preventDefault();
-      const res = await fetch("http://localhost:3001/category/"+_id, {method:'delete'});
+      const res = await fetch("http://localhost:3001/categories/"+_id, {method:'delete'});
   }
   let updateCategory = async (evt, _id) => {
     let body = JSON.stringify(activeCat);
-    const res = await fetch("http://localhost:3001/category/"+_id, {
+    const res = await fetch("http://localhost:3001/categories/"+_id, {
       method:'put',
       headers: {'Content-Type':'application/json'},
       body: body

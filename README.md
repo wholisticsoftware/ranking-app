@@ -7,6 +7,8 @@ Just a proof-of-skillset.
 
 ## Backend uses KOA, mongo driver, bodyparser, etc.
 
+## Uses typescript (loosely at the moment)
+
 ### If you are looking at this, and would like to see something added or refined 
 
 * better error handling?  
@@ -16,6 +18,7 @@ Just a proof-of-skillset.
 * Beautify the front-end a bit?
 * Componetize the React UI?
 * better tests?
+* improved typescript typing?
 * Something else?
 
 Let me know: matt@wholisticsoftware.com
