@@ -15,6 +15,7 @@ Just a proof-of-skillset.
 * Consume an external API?
 * Beautify the front-end a bit?
 * Componetize the React UI?
+* better tests?
 * Something else?
 
 Let me know: matt@wholisticsoftware.com
