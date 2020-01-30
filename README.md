@@ -1,9 +1,12 @@
-# A simple demo of using KOA to define a RESTful API
-Just a proof-of-skillset for Jobot opportunity.  
+# A *simple* demo of using KOA to define a RESTful API
+A proof-of-skillset for Jobot opportunity.  
 
 This is a *quickly built demo*.  You can run it by cloning this repo, then:
+
 /frontend/ $ npm start
+
 /backend/ $ npm dev
+
 
 ## Uses MongoDB for persistence (running on localhost)
 
