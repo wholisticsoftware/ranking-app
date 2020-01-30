@@ -3,10 +3,11 @@ A proof-of-skillset for Jobot opportunity.
 
 This is a *quickly built demo*.  You can run it by cloning this repo, then:
 
-/frontend/ $ npm start
-
 /backend/ $ npm dev
 
+/frontend/ $ npm start
+
+NOTE: Make sure mongo is running in background on localhost
 
 ## Uses MongoDB for persistence (running on localhost)
 
