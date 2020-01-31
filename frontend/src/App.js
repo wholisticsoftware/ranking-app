@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Button from 'react-bootstrap/Button';
+
 import logo from './logo.svg';
 
 import Category from './components/Category';
@@ -52,7 +54,7 @@ function App() {
     <div className="App">
       <h3>A Simple Demo of API Use</h3>
         <hr />
-        <button onClick={addCategory}>Add Category</button><input type="text" name="category-name" value={catName} onChange={e => setCatName(e.target.value)}></input>
+        <Button onClick={addCategory}>Add Category</Button><input type="text" name="category-name" value={catName} onChange={e => setCatName(e.target.value)}></input>
       <hr />
       <Router>
         <Switch>
