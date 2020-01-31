@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import logo from './logo.svg';
+
+import Category from './components/Category';
 import './App.css';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -8,7 +11,7 @@ function App() {
   const [hasError, setErrors] = useState(false);
   const [categories, setCategories] = useState({});
   const [catName, setCatName] = useState("");
-  const [activeCat, setActiveCat] = useState(null);
+  
     
   useEffect(() => {
     async function fetchData() {
@@ -42,50 +45,37 @@ function App() {
   }
   let activateCategory = async (evt, id) => {
       evt.preventDefault();
-      const res = await fetch("http://localhost:3001/categories/"+id);
-
-      if (!res.ok) { throw new Error(res.status); }
-
-      const data = await res.json();
-      console.log("data: " + JSON.stringify(data));
       
-      setActiveCat(data);
   }
-  let deleteCategory = async (evt, _id) => {
-      evt.preventDefault();
-      const res = await fetch("http://localhost:3001/categories/"+_id, {method:'delete'});
-  }
-  let updateCategory = async (evt, _id) => {
-    let body = JSON.stringify(activeCat);
-    const res = await fetch("http://localhost:3001/categories/"+_id, {
-      method:'put',
-      headers: {'Content-Type':'application/json'},
-      body: body
-    });      
-  }
+
   return (
     <div className="App">
       <h3>A Simple Demo of API Use</h3>
-      <div>
-        {activeCat ? <>
-          Category: {activeCat.name} ({activeCat._id})<br/>
-          <button onClick={(e) => updateCategory(e, activeCat._id)}>Update</button>&nbsp;<button onClick={(e) => deleteCategory(e, activeCat._id)}>Delete</button><br/>
-          <textarea name="description" value={activeCat.description} onChange={e => setActiveCat({...activeCat, description: e.target.value})}/>
-        </> : ""
-        
-        }
         <hr />
         <button onClick={addCategory}>Add Category</button><input type="text" name="category-name" value={catName} onChange={e => setCatName(e.target.value)}></input>
-        {categories.results ? categories.results.map(({_id, name}) => <div><a href="" onClick={(e) => activateCategory(e, _id) }>{name} - {_id}</a></div>) : ""}
-        <br/>
-        <hr />
-        <span>Has error: {JSON.stringify(hasError)}</span>
-      </div>
+      <hr />
+      <Router>
+        <Switch>
+          <Route path="/category/:id" render={({match}) => (
+            <Category _id={match.params.id}/>
+          )}/>
+          <Route path="/">
+            {
+              categories.results ? 
+              categories.results.map(({_id, name}) => <div><Link to={`/category/${_id}`}>{name}</Link></div>) 
+              : 
+              ""
+            }
+          </Route>
+        </Switch>
+       </Router>
     </div>
   );
 }
 
 export default App;
+
+//<a href="" onClick={(e) => activateCategory(e, _id) }>{name}</a> - 
 //<span>{JSON.stringify(categories)}</span>
 //<img src={logo} className="App-logo" alt="logo" />
 //  <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">Learn React</a>
