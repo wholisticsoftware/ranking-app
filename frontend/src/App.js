@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 
 import logo from './logo.svg';
 
@@ -51,10 +52,14 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <h3>A Simple Demo of API Use</h3>
+    <div className="App" style={{textAlign:`center`}}>
+        <h3>A Simple Demo of API Use</h3>
         <hr />
-        <Button onClick={addCategory}>Add Category</Button><input type="text" name="category-name" value={catName} onChange={e => setCatName(e.target.value)}></input>
+        <Form>
+        <Button onClick={addCategory}>Add Category</Button>&nbsp;
+        <Form.Control type="text" placeholder="New Category" style={{width: `10rem`,display:"inline", verticalAlign:`middle`}} value={catName} onChange={e => setCatName(e.target.value)}/>
+        </Form>
+
       <hr />
       <Router>
         <Switch>
@@ -76,7 +81,7 @@ function App() {
 }
 
 export default App;
-
+//        <input type="text" name="category-name" value={catName} onChange={e => setCatName(e.target.value)}></input>
 //<a href="" onClick={(e) => activateCategory(e, _id) }>{name}</a> - 
 //<span>{JSON.stringify(categories)}</span>
 //<img src={logo} className="App-logo" alt="logo" />
