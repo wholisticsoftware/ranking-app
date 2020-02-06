@@ -1,31 +1,32 @@
-# A *simple* demo of using KOA to define a RESTful API
-A proof-of-skillset for Jobot opportunity.  
+# An App to Allow Voting for Entries in Categories
+My first impulse in creating this was to try to determine a few tough music questions, like:
 
-This is a *quickly built demo*.  You can run it by cloning this repo, then:
+* What's the better album: Dark Side of the Moon, or Joshua Tree?
+* Whose the better songwriter: John Lennon, or Bob Marley?
+* Bach vs. Beethoven?
 
-/backend/ $ npm dev
+And then it got into other areas, like a virus:
+* Socrates vs. Lao Tzu (philosophers)?
+* George Washington vs. Gandhi (liberators)
+* Alexander the Great vs. Ghenghis Khan (conquerors)?
 
-/frontend/ $ npm start
+## Run it full-stack:
 
-NOTE: Make sure mongo is running in background on localhost
+1: Make sure mongo is running in background on localhost
+2: /backend/ $ npm dev
+3: /frontend/ $ npm start
 
 ## Uses MongoDB for persistence (running on localhost)
+TODO: support different environments
+TODO: Authentication
+TODO: Demo
 
-## Uses basic React frontend for client (VERY basic at the moment)
+## Uses basic React frontend for client 
 
 ## Backend uses KOA, mongo driver, bodyparser, etc.
 
-## Uses typescript (loosely at the moment)
+## ~~uses typescript~~ Typescript is slower-to-code than JS, so this is going back to straight JS
 
-### If you are looking at this, and would like to see something added or refined 
+### If you are looking at this, and would like to see something added or refined, jump in there
 
-* better error handling?
-* Security?  Want to see some authentication/authorization?
-* Consume an external API?
-* Beautify the front-end a bit?
-* Componetize the React UI?
-* better tests?
-* improved typescript typing?
-* Something else?
-
-Let me know via Nathan and Thuan at Jobot or matt@wholisticsoftware.com
+ME: matt@wholisticsoftware.com
