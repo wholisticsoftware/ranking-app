@@ -1,11 +1,16 @@
 # An App to Allow Voting for Entries in Categories
-My first impulse in creating this was to try to determine a few tough music questions, like:
+This started with the following question:
+
+:: What is the greatest song ever written? ::
+
+Then it started growing:
 
 * What's the better album: Dark Side of the Moon, or Joshua Tree?
 * Whose the better songwriter: John Lennon, or Bob Marley?
 * Bach vs. Beethoven?
 
 And then it got into other areas, like a virus:
+
 * Socrates vs. Lao Tzu (philosophers)?
 * George Washington vs. Gandhi (liberators)
 * Alexander the Great vs. Ghenghis Khan (conquerors)?
